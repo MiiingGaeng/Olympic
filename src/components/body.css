@@ -1,0 +1,38 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+
+main {
+  width: 1000px;
+  position: absolute;
+  top: 230px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 20px;
+  background: rgba(236, 214, 134, 0.5);
+
+  #list_section {
+    width: 750px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid #fff;
+
+    p {
+      display: inline-block;
+      width: 50px;
+      text-align: center;
+    }
+  }
+}
