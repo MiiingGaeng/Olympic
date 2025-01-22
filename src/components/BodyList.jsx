@@ -2,11 +2,11 @@ import React from 'react';
 import './body.css';
 import { CountryList } from './CountryList';
 
-export const Body = ({ countryList }) => {
+export const BodyList = ({ countryList, removeCountry }) => {
   return (
     <main>
       <ul>
-        <li id="list_section">
+        <li id="list-section">
           <p>Country</p>
           <p>Golds</p>
           <p>Silvers</p>
@@ -15,12 +15,18 @@ export const Body = ({ countryList }) => {
         </li>
         <br />
         {countryList.length === 0 ? (
-          <li style={{ width: '100%', textAlign: 'center' }}>
-            아직 등록된 국가가 없습니다.
+          <li id="list-nothing">
+            <p>아직 등록된 국가가 없습니다.</p>
           </li>
         ) : (
           countryList.map((country, idx) => {
-            return <CountryList country={country} key={idx} />;
+            return (
+              <CountryList
+                country={country}
+                key={idx}
+                removeCountry={removeCountry}
+              />
+            );
           })
         )}
       </ul>

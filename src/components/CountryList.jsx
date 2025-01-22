@@ -1,10 +1,9 @@
 import React from 'react';
 import './countryList.css';
 
-export const CountryList = ({ country }) => {
+export const CountryList = ({ country, removeCountry }) => {
   //정보 넣기
-  let { name, gold, silver, bronze } = country;
-  let total = parseInt(gold) + parseInt(silver) + parseInt(bronze);
+  let { name, gold, silver, bronze, total } = country;
 
   return (
     <li key={name}>
@@ -15,7 +14,13 @@ export const CountryList = ({ country }) => {
         <p>{bronze}</p>
         <p>{total}</p>
       </div>
-      <button>DELETE</button>
+      <button
+        onClick={() => {
+          removeCountry(name);
+        }}
+      >
+        DELETE
+      </button>
     </li>
   );
 };
