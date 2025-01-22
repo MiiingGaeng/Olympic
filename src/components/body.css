@@ -21,7 +21,7 @@ main {
   border-radius: 20px;
   background: rgba(236, 214, 134, 0.5);
 
-  #list_section {
+  #list-section {
     width: 750px;
     height: 50px;
     display: flex;
@@ -34,5 +34,12 @@ main {
       width: 50px;
       text-align: center;
     }
+  }
+
+  #list-nothing {
+    width: 1000px;
+    height: 50px;
+    padding: 0 50px;
+    font-size: 12px;
   }
 }
