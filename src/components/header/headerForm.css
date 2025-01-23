@@ -22,7 +22,7 @@ header {
   justify-content: center;
   padding: 15px;
   border-radius: 20px;
-  background: rgb(236, 214, 134);
+  background: #fffae5;
 
   h1 {
     display: inline-block;
@@ -33,6 +33,7 @@ header {
     line-height: 30px;
     font-weight: 400;
     margin-bottom: 10px;
+    color: rgb(236, 214, 134);
   }
 
   #header_title_wrap {
@@ -41,13 +42,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #716032;
 
     ul {
       width: 750px;
       display: flex;
       justify-content: space-around;
       align-items: center;
-      border-bottom: 2px solid #fff;
+      border-bottom: 2px solid rgb(236, 214, 134);
 
       li {
         display: inline-block;
@@ -63,8 +65,14 @@ header {
       height: 30px;
       border-radius: 25px;
       border: none;
-      background: #fff;
+      background: rgb(236, 214, 134);
+      color: #fffae5;
       margin-bottom: 10px;
+      transition: all 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 

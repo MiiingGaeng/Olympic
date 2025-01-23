@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { HeaderForm } from './components/HeaderForm';
-import { BodyList } from './components/BodyList';
+import { HeaderForm } from './components/header/HeaderForm';
+import { BodyListWrap } from './components/body/BodyListWrap';
+import './app.css';
 
 export const App = () => {
   //로컬스토리지
@@ -18,6 +19,12 @@ export const App = () => {
       bronze: Number(bronze),
       total: Number(total),
     };
+
+    //예외처리
+    //이름이 공백인 경우
+    if (!name.trim()) return alert('유효하지 않은 정보입니다!');
+    //메달이 음수인 경우
+    if (gold && silver && bronze < 0) return alert('유효하지 않은 정보입니다!');
 
     //목록에 있는지 여부 판단로직
     const isCountryFound = [...countries].some(
@@ -117,9 +124,8 @@ export const App = () => {
     alert('해당 정보가 수정되었습니다!');
   };
 
-  const [isSortedByTotal, setIsSortedByToTal] = useState(false);
-
   //메달 개수 토글 로직
+  const [isSortedByTotal, setIsSortedByToTal] = useState(false);
   const toggleTotal = () => {
     //금메달-은메달-동메달 순서
     if (isSortedByTotal) {
@@ -153,13 +159,15 @@ export const App = () => {
   };
 
   return (
-    <div>
-      <HeaderForm
-        addCountry={addCountry}
-        updateCountry={updateCountry}
-        toggleTotal={toggleTotal}
-      />
-      <BodyList countryList={countryList} removeCountry={removeCountry} />
+    <div id="backgroundImage">
+      <div id="backgroundGradient">
+        <HeaderForm
+          addCountry={addCountry}
+          updateCountry={updateCountry}
+          toggleTotal={toggleTotal}
+        />
+        <BodyListWrap countryList={countryList} removeCountry={removeCountry} />
+      </div>
     </div>
   );
 };

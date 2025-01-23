@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './header.css';
-import { Button } from './Button';
+import './headerForm.css';
+import { Button } from '../common/Button';
+import { Input } from '../common/Input';
 
 export const HeaderForm = ({ addCountry, updateCountry, toggleTotal }) => {
   //state
@@ -36,48 +37,38 @@ export const HeaderForm = ({ addCountry, updateCountry, toggleTotal }) => {
       </nav>
 
       <div id="header_input_wrap">
-        <form id="input_wrap">
-          <input
+        <form
+          id="input_wrap"
+          onSubmit={(e) => {
+            e.preventDefault();
+            addCountry(name, gold, silver, bronze, total);
+          }}
+        >
+          <Input
             type="text"
             placeholder="Country name"
             value={name}
             onChange={(e) => {
-              e.preventDefault();
               setName(e.target.value);
             }}
           />
-          <input
+          <Input
             type="number"
             placeholder="0"
             value={gold}
-            onChange={(e) => {
-              e.preventDefault();
-              e.target.value >= 0
-                ? setGold(e.target.value)
-                : alert('유효하지 않은 값입니다!');
-            }}
+            onChange={(e) => setGold(e.target.value)}
           />
-          <input
+          <Input
             type="number"
             placeholder="0"
             value={silver}
-            onChange={(e) => {
-              e.preventDefault();
-              e.target.value >= 0
-                ? setSilver(e.target.value)
-                : alert('유효하지 않은 값입니다!');
-            }}
+            onChange={(e) => setSilver(e.target.value)}
           />
-          <input
+          <Input
             type="number"
             placeholder="0"
             value={bronze}
-            onChange={(e) => {
-              e.preventDefault();
-              e.target.value >= 0
-                ? setBronze(e.target.value)
-                : alert('유효하지 않은 값입니다!');
-            }}
+            onChange={(e) => setBronze(e.target.value)}
           />
         </form>
 
