@@ -104,6 +104,9 @@ export const App = () => {
       return;
     }
 
+    //메달이 음수인 경우
+    if (gold && silver && bronze < 0) return alert('유효하지 않은 정보입니다!');
+
     //국가 메달순으로 정렬
     const sortedUpdateCountry = updatedCountries.sort((a, b) => {
       // 금메달 기준 정렬
