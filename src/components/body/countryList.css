@@ -22,7 +22,7 @@ li {
       display: inline-block;
       width: 50px;
       text-align: center;
-      font-size: 12px;
+      font-size: 15px;
     }
   }
 
@@ -32,5 +32,12 @@ li {
     border-radius: 15px;
     border: none;
     background: #fff;
+    color: rgb(236, 214, 134);
+    transition: all 0.3s;
+
+    &:hover {
+      background: rgb(236, 214, 134);
+      color: #fff;
+    }
   }
 }

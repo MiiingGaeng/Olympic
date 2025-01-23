@@ -11,6 +11,7 @@ li {
 
 main {
   width: 1000px;
+  max-height: 520px;
   position: absolute;
   top: 230px;
   left: 50%;
@@ -19,7 +20,8 @@ main {
   flex-direction: column;
   padding: 15px;
   border-radius: 20px;
-  background: rgba(236, 214, 134, 0.5);
+  background: rgba(236, 214, 134, 0.8);
+  overflow: auto;
 
   #list-section {
     width: 750px;
@@ -28,6 +30,7 @@ main {
     justify-content: space-around;
     align-items: center;
     border-bottom: 2px solid #fff;
+    color: #716032;
 
     p {
       display: inline-block;
@@ -40,6 +43,7 @@ main {
     width: 1000px;
     height: 50px;
     padding: 0 50px;
-    font-size: 12px;
+    font-size: 15px;
+    color: #716032;
   }
 }

@@ -1,8 +1,8 @@
 import React from 'react';
-import './body.css';
+import './bodyListWrap.css';
 import { CountryList } from './CountryList';
 
-export const BodyList = ({ countryList, removeCountry }) => {
+export const BodyListWrap = ({ countryList, removeCountry }) => {
   return (
     <main>
       <ul>
@@ -19,11 +19,11 @@ export const BodyList = ({ countryList, removeCountry }) => {
             <p>아직 등록된 국가가 없습니다.</p>
           </li>
         ) : (
-          countryList.map((country, idx) => {
+          countryList.map((country) => {
             return (
               <CountryList
                 country={country}
-                key={idx}
+                key={country.name}
                 removeCountry={removeCountry}
               />
             );
