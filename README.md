@@ -5,10 +5,13 @@ Vite + React를 사용한 첫번째 프로젝트로, 국가별 2024 파리 올�
 ## 프로젝트 미리보기🏅
 
 - 첫 화면
+<img width="1440" alt="Screenshot 2025-01-23 at 6 28 13 PM" src="https://github.com/user-attachments/assets/b3d6d3c8-588a-47a4-9a9d-eb73738b7f92" />
 
 - 금-은-동 순서로 정렬
+<img width="1440" alt="Screenshot 2025-01-23 at 6 31 55 PM" src="https://github.com/user-attachments/assets/96c8aa51-92d2-45d5-9ea6-da1b42338554" />
 
 - 전체 메달 순서로 정렬
+<img width="1440" alt="Screenshot 2025-01-23 at 6 31 59 PM" src="https://github.com/user-attachments/assets/e9843efa-7289-4c55-a0f1-b037344c973e" />
 
 ## 프로젝트 소개📄
 
